@@ -1,0 +1,91 @@
+@font-face {
+    font-family: 'font400';
+    src: url('../../../../assets/fonts/font400.ttf');
+}
+
+@font-face {
+    font-family: 'font500';
+    src: url('../../../../assets/fonts/font500.ttf');
+}
+
+@font-face {
+    font-family: 'font600';
+    src: url('../../../../assets/fonts/font600.ttf');
+}
+
+@font-face {
+    font-family: 'font800';
+    src: url('../../../../assets/fonts/font800.ttf');
+}
+
+.search {
+    width: 100%;
+    margin-top: -50px;
+    padding: 0px 20px;
+}
+
+.search_container {
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.1);
+}
+
+.search_form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search_form_input_div {
+    width: 22%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.border_class {
+    border-right: 1px solid #767373;
+}
+
+
+
+.search_date_input,
+.search_bulim_input {
+    border: 1px solid transparent;
+    outline: none;
+    font-size: 16px;
+}
+
+.search_radio_input {
+    margin-left: 5px;
+}
+
+.search_form_btn {
+    width: 154px;
+    height: 100px;
+    background: #006AFF;
+    border-radius: 0px 10px 10px 0px;
+    font-family: 'font500';
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    transition: .5s;
+    cursor: pointer;
+    color: #FFFFFF;
+    border: 1px solid transparent;
+}
+
+.search_form_btn:hover {
+    background-color: #FE8B37;
+    transition: .5s;
+}
+
+
+@media only screen and (max-width:1000px) {
+    .search {
+        display: none;
+    }
+}

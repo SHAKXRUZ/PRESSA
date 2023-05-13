@@ -1,0 +1,76 @@
+@font-face {
+    font-family: 'font600';
+    src: url('../../../../assets/fonts/font600.ttf');
+}
+
+.heroBanner {
+    width: 100%;
+    background-color: #006AFF;
+}
+
+.heroBanner_container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heroBanner_text {
+    max-width: 840px;
+    text-align: center;
+    font-size: 64px;
+    line-height: 79px;
+    font-family: 'font600';
+    color: #FFFFFF;
+    margin: 100px 0px 140px 0px;
+}
+
+@media only screen and (max-width:1100px) {
+    .heroBanner_text {
+        max-width: 700px;
+        font-size: 54px;
+        line-height: 70px;
+    }
+}
+
+@media only screen and (max-width:1000px) {
+    .heroBanner_text {
+        max-width: 700px;
+        font-size: 50px;
+        line-height: 60px;
+        margin: 60px 0px 100px 0px;
+
+    }
+}
+
+@media only screen and (max-width:850px) {
+    .heroBanner_text {
+        font-size: 44px;
+        line-height: 55px;
+        margin: 50px 0px 100px 0px;
+    }
+}
+
+
+@media only screen and (max-width:650px) {
+    .heroBanner_text {
+        width: 100%;
+        font-size: 38px;
+        line-height: 48px;
+        margin: 0px 0px 50px 0px;
+    }
+
+    .heroBanner_container {
+        padding: 0px 10px;
+    }
+}
+
+@media only screen and (max-width:650px) {
+    .heroBanner_text {
+        font-size: 28px;
+        line-height: 38px;
+        text-align: start;
+    }
+}

@@ -1,0 +1,126 @@
+@font-face {
+    font-family: 'font400';
+    src: url('../../assets/fonts/font400.ttf');
+}
+
+@font-face {
+    font-family: 'font500';
+    src: url('../../assets/fonts/font500.ttf');
+}
+
+@font-face {
+    font-family: 'font600';
+    src: url('../../assets/fonts/font600.ttf');
+}
+
+@font-face {
+    font-family: 'font800';
+    src: url('../../assets/fonts/font800.ttf');
+}
+
+.footer {
+    width: 100%;
+    padding: 0px 20px;
+    background: linear-gradient(265.48deg, #095ACD 33.12%, #006AFF 84.7%);
+}
+
+.footer_container {
+    max-width: 1440px;
+    padding: 40px 0px;
+    margin: 0 auto;
+}
+
+.footer_content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_right_content {
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_pages_link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    font-family: 'font500';
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.footer_phone_link {
+    text-decoration: none;
+    display: flex;
+    gap: 11px;
+    font-family: 'font400';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+
+.networks {
+    display: flex;
+    gap: 20px;
+}
+
+.footer_network_link {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+@media only screen and (max-width:1300px) {
+    .footer_right_content {
+        width: 700px;
+    }
+}
+
+@media only screen and (max-width:1000px) {
+    .footer_right_content {
+        width: 580px;
+    }
+
+    .networks {
+        gap: 15px;
+    }
+}
+
+@media only screen and (max-width:768px) {
+
+    .footer_container {
+        padding: 30px 0px;
+    }
+
+    .footer_content {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media only screen and (max-width:650px) {
+    .footer_right_content {
+        max-width: 325px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    
+    .footer {
+        padding: 0px 10px;
+    }
+}
+
+@media only screen and (max-width:400px) {
+    .footer_right_content {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .footer_logo {
+        width: 90px;
+        height: 36px;
+    }
+}
