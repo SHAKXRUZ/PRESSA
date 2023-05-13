@@ -106,7 +106,9 @@
         height: auto;
     }
 
-    .reklama {}
+    .reklama {
+        margin-bottom: 80px;
+    }
 }
 
 @media only screen and (max-width:768px) {
@@ -183,9 +185,6 @@
 
 
 @media only screen and (max-width:400px) {
-    .reklama {
-        margin-bottom: 175px;
-    }
 
     .reklama_content {
         gap: 86px;
