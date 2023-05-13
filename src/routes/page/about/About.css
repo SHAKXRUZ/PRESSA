@@ -1,0 +1,211 @@
+@font-face {
+    font-family: 'font400';
+    src: url('../../../assets/fonts/font400.ttf');
+}
+
+@font-face {
+    font-family: 'font500';
+    src: url('../../../assets/fonts/font500.ttf');
+}
+
+@font-face {
+    font-family: 'font600';
+    src: url('../../../assets/fonts/font600.ttf');
+}
+
+@font-face {
+    font-family: 'font800';
+    src: url('../../../assets/fonts/font800.ttf');
+}
+
+.about {
+    width: 100%;
+    padding: 0px 20px;
+}
+
+.about_container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.about_content {
+    margin: 42px 0px 191px 0px;
+}
+
+.about_header {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-bottom: 72px;
+}
+
+.about_pages_home_icons {
+    color: #006AFF;
+    font-size: 22px;
+}
+
+.about_pages_header_title {
+    font-family: 'font400';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+}
+
+.about_pages_title {
+    font-family: 'font600';
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 40px;
+    color: #333333;
+}
+
+.about_pages_text1 {
+    max-width: 799px;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 40px;
+    font-family: 'font400';
+    color: #333333;
+}
+
+.about_pages_text {
+    font-family: 'font400';
+    max-width: 819px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 40px;
+    color: #333333;
+}
+
+.about_pages_text3 {
+    font-family: 'font400';
+    max-width: 819px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 40px;
+    color: #333333;
+    margin: 30px 0px;
+}
+
+@media only screen and (max-width:1000px) {
+
+    .about_content {
+        margin: 40px 0px 150px 0px;
+    }
+
+    .about_header {
+        margin-bottom: 50px;
+    }
+
+    .about_pages_home_icons {
+        font-size: 20px;
+    }
+
+    .about_pages_title {
+        font-size: 28px;
+        line-height: 42px;
+    }
+
+    .about_pages_text1 {
+        max-width: 100%;
+        font-size: 20px;
+        line-height: 32px;
+    }
+
+    .about_pages_text {
+        max-width: 100%;
+        font-size: 20px;
+        line-height: 32px;
+    }
+
+    .about_pages_text3 {
+        max-width: 100%;
+        font-size: 20px;
+        line-height: 32px;
+        margin: 20px 0px;
+    }
+}
+
+
+
+@media only screen and (max-width:768px) {
+    .about {
+        width: 100%;
+        padding: 0px 20px;
+    }
+
+    .about_content {
+        margin: 30px 0px 100px 0px;
+    }
+
+    .about_header {
+        margin-bottom: 50px;
+    }
+
+    .about_pages_home_icons {
+        font-size: 20px;
+    }
+
+    .about_pages_title {
+        font-size: 22px;
+        line-height: 38px;
+        margin-bottom: 40px;
+    }
+
+    .about_pages_text1 {
+        max-width: 100%;
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    .about_pages_text {
+        max-width: 100%;
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    .about_pages_text3 {
+        max-width: 100%;
+        font-size: 16px;
+        line-height: 28px;
+        margin: 15px 0px;
+    }
+}
+
+
+
+@media only screen and (max-width:650px) {
+
+    .about {
+        padding: 0px 10px;
+    }
+
+    .about_content {
+        margin: 25px 0px 50px 0px;
+    }
+
+    .about_header {
+        margin-bottom: 25px;
+    }
+
+    .about_pages_title {
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 15px;
+    }
+
+    .about_pages_text1 {
+        line-height: 25px;
+    }
+
+    .about_pages_text {
+        line-height: 25px;
+    }
+
+    .about_pages_text3 {
+        line-height: 25px;
+    }
+}
