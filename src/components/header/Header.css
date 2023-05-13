@@ -20,13 +20,13 @@
 
 .header {
     width: 100%;
-    background-color: #006AFF;
+    padding: 0px 20px;
+    background: linear-gradient(265.48deg, #095ACD 33.12%, #006AFF 84.7%);
 }
 
 .header_container {
     max-width: 1440px;
     margin: 0 auto;
-    padding: 0px 20px;
 }
 
 .header_content {
@@ -380,7 +380,7 @@
         display: flex;
     }
 
-    .header_container {
+    .header {
         padding: 0px 10px;
     }
 }
