@@ -1,0 +1,16 @@
+.login{
+    width: 100vw;
+    height: 100vh;
+    background-color: #E5E5E5;
+}
+.login_container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login_content{
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+}
