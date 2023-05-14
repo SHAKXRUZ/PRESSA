@@ -1,8 +1,8 @@
 import "./Elon.css";
 import { useState } from "react";
 import { BiHomeAlt } from "react-icons/bi";
+import { BsCloudUpload } from "react-icons/bs";
 const Elon = () => {
-  // date sana vaqt bugungu
   const date = new Date();
   const bugun =
     date.getFullYear() +
@@ -12,7 +12,7 @@ const Elon = () => {
     "-" +
     date.getDate();
   const vaqt =
-    date.getHours() +
+    (date.getHours() < 10 ? "0" + date.getHours() : date.getHours()) +
     ":" +
     (date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes());
 
@@ -21,6 +21,7 @@ const Elon = () => {
   const [bulimValue, setBulimValue] = useState("Web dasturlash");
   const [ichkiBulimValue, setIchkiBulimValue] = useState("Java developer");
   const [radioValue, setRadioValue] = useState("online");
+  const [elon_img_url, setElon_img_url] = useState("");
 
   function sanaFunction(e) {
     setSanaValue(e.target.value);
@@ -38,11 +39,53 @@ const Elon = () => {
     setRadioValue(e.target.value);
   };
 
-  console.log(sanaValue);
-  console.log(vaqtValue);
-  console.log(bulimValue);
-  console.log(ichkiBulimValue);
-  console.log(radioValue);
+  const uploadImagesElon = async (e) => {
+    const files = e.target.files;
+    const data = new FormData();
+    data.append("file", files[0]);
+    data.append("upload_preset", "images");
+
+    const res = await fetch(
+      "https://api.cloudinary.com/v1_1/dtiuszgwz/image/upload",
+      {
+        method: "POST",
+        body: data,
+      }
+    );
+    const data2 = await res.json();
+    setElon_img_url(data2.secure_url);
+  };
+
+  const elon = (e) => {
+    e.preventDefault();
+    let {
+      url,
+      ismsharif,
+      professiya,
+      telifon1,
+      telifon2,
+      description,
+      mavzumatni,
+    } = e.target;
+
+    const data = JSON.stringify({
+      sana: sanaValue,
+      vaqt: vaqtValue,
+      yunalish: bulimValue,
+      ichki_yunalish: ichkiBulimValue,
+      tadbir_turi: radioValue,
+      link: url.value,
+      ismsharif: ismsharif.value,
+      professiya: professiya.value,
+      telifon1: telifon1.value,
+      telifon2: telifon2.value,
+      description: description.value,
+      mavzumatni: mavzumatni.value,
+      img_url: elon_img_url,
+    });
+
+    console.log(data);
+  };
 
   return (
     <div className="elon">
@@ -51,7 +94,7 @@ const Elon = () => {
           <BiHomeAlt className="elon_home_icons" />
           <p className="elon_home_header_text">E’lon berish</p>
         </div>
-        <form className="elon_content_form">
+        <form onSubmit={(e) => elon(e)} className="elon_content_form">
           <div className="elon_berish">
             <p className="elon_berish_title">E’lon berish</p>
             <div className="elon_berish_content">
@@ -247,15 +290,47 @@ const Elon = () => {
             <input
               className="post_description_input"
               type="text"
+              name="description"
+              id="description"
               placeholder="Description..."
+              required
             />
 
             <p className="post_images_input_title">Rasm yuklash</p>
             <div className="post_images_upload_input_div">
-              <label>
-                <button>Upload img</button>
-                <input type="text" className="post_images_upload_input" />
+              <label form="file" required>
+                <p className="post_upload_images_btn">
+                  <BsCloudUpload className="post_upload_images_btn_icons" />
+                  Upload img
+                </p>
+                <input
+                  type="file"
+                  name="file"
+                  id="file"
+                  className="post_images_upload_input"
+                  required
+                  onChange={(e) => uploadImagesElon(e)}
+                />
               </label>
+            </div>
+            <p className="post_images_upload_warning_text">
+              Yuklanyotgan rasm o’lchami 1080x1080 hajmi 2 mb dan oshmasin
+            </p>
+            <p className="post_mavzu_matni_title_text">Mavzu matni</p>
+
+            <textarea
+              className="post_mavzu_matni_textarea"
+              name="mavzumatni"
+              id="mavzumatni"
+              placeholder="Mavzu matni"
+              required
+            ></textarea>
+
+            <div className="elon_footer_btn_div">
+              <p className="elon_bekor_qilish_btn">Bekor qilish</p>
+              <button className="elon_submit_btn" type="submit">
+                E’lonni yuborish
+              </button>
             </div>
           </div>
         </form>
