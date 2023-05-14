@@ -1,16 +1,229 @@
-.login{
-    width: 100vw;
+@font-face {
+    font-family: 'font400';
+    src: url('../../assets/fonts/font400.ttf');
+}
+
+@font-face {
+    font-family: 'font500';
+    src: url('../../assets/fonts/font500.ttf');
+}
+
+@font-face {
+    font-family: 'font600';
+    src: url('../../assets/fonts/font600.ttf');
+}
+
+@font-face {
+    font-family: 'font800';
+    src: url('../../assets/fonts/font800.ttf');
+}
+
+.login {
+    width: 100%;
     height: 100vh;
     background-color: #E5E5E5;
+    padding: 0px 20px;
 }
-.login_container{
-    height: 100vh;
+
+.login_container {
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.login_logo {
+    width: 105px;
+    margin: 30px 0px 100px 0px;
+}
+
+.login_form_div {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.login_content{
-    width: 500px;
-    height: 500px;
-    border: 1px solid black;
+
+.login_form_title {
+    margin-bottom: 70px;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 56px;
+    color: #222222;
+    font-family: 'font500';
+}
+
+.login_form_input_div {
+    width: 499px;
+    height: 66px;
+    border: 1px solid rgba(15, 24, 38, 0.2);
+    border-radius: 4px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.login_form_input {
+    width: 100%;
+    height: 100%;
+    padding: 0px 10px;
+    outline: none;
+    border: 1px solid transparent;
+    font-family: 'font400';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+    opacity: 0.5;
+    background-color: transparent;
+}
+
+.login_input_icons {
+    width: 50px;
+    color: #222222;
+}
+
+.login_resit_password_text {
+    margin-bottom: 30px;
+}
+
+.login_btn_div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.login_resit_password_text {
+    text-align: end;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+    font-family: 'font400';
+}
+
+.login_btn {
+    width: 161px;
+    height: 72px;
+    background: #006AFF;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 40px;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.login_btn:hover {
+    border-color: #006AFF;
+    background-color: transparent;
+    color: #006AFF;
+    transition: .5s;
+}
+
+@media only screen and (max-width:1000px) {
+    .login {
+        width: 100%;
+        height: 100vh;
+        background-color: #E5E5E5;
+        padding: 0px 20px;
+    }
+    
+    .login_container {
+        max-width: 1440px;
+        margin: 0 auto;
+        position: relative;
+    }
+    
+    .login_logo {
+        width: 105px;
+        margin: 30px 0px 120px 0px;
+    }
+    
+    .login_form_div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .login_form_title {
+        margin-bottom: 70px;
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 56px;
+        color: #222222;
+        font-family: 'font500';
+    }
+    
+    .login_form_input_div {
+        width: 499px;
+        height: 66px;
+        border: 1px solid rgba(15, 24, 38, 0.2);
+        border-radius: 4px;
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .login_form_input {
+        width: 100%;
+        height: 100%;
+        padding: 0px 10px;
+        outline: none;
+        border: 1px solid transparent;
+        font-family: 'font400';
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        color: #000000;
+        opacity: 0.5;
+        background-color: transparent;
+    }
+    
+    .login_input_icons {
+        width: 50px;
+        color: #222222;
+    }
+    
+    .login_resit_password_text {
+        margin-bottom: 30px;
+    }
+    
+    .login_btn_div {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .login_resit_password_text {
+        text-align: end;
+        cursor: pointer;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #000000;
+        font-family: 'font400';
+    }
+    
+    .login_btn {
+        width: 161px;
+        height: 72px;
+        background: #006AFF;
+        border-radius: 4px;
+        border: 1px solid transparent;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 40px;
+        color: #FFFFFF;
+        cursor: pointer;
+        transition: .5s;
+    }
+    
+    .login_btn:hover {
+        border-color: #006AFF;
+        background-color: transparent;
+        color: #006AFF;
+        transition: .5s;
+    }
 }
