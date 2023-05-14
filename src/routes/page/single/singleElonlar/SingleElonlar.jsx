@@ -36,6 +36,7 @@ const SingleElonlar = () => {
                   15:00
                 </p>
               </div>
+
               <p className="single_elonlar_left_date_text">
                 <HiOutlineStatusOnline className="single_elonlar_left_date_icon single_online_icons" />
                 Online
@@ -44,6 +45,7 @@ const SingleElonlar = () => {
                 <FiShare2 className="single_pages_share_icons" />
                 Ulashing
               </p>
+
               <div className="single_left_links_div">
                 <a
                   className="single_left_icon_links"
@@ -75,6 +77,27 @@ const SingleElonlar = () => {
                 >
                   <TbBrandTelegram />
                 </a>
+              </div>
+            </div>
+
+            <div className="media_768_div">
+              <div className="media_768_center_div">
+                <p className="single_elonlar_left_date_text_media_768">
+                  <HiOutlineCalendar className="single_elonlar_left_date_iconmedia_768" />
+                  17 / 01 / 2022
+                </p>
+                <p className="single_elonlar_left_date_text_media_768">
+                  <AiOutlineClockCircle className="single_elonlar_left_date_iconmedia_768" />
+                  15:00
+                </p>
+                <p className="single_elonlar_left_date_text_media_768">
+                  <HiOutlineStatusOnline className="single_elonlar_left_date_iconmedia_768" />
+                  Online
+                </p>
+                <p className="single_elonlar_left_date_text_media_768">
+                  <FiShare2 className="single_elonlar_left_date_iconmedia_768" />
+                  Ulashing
+                </p>
               </div>
             </div>
 
@@ -123,7 +146,10 @@ const SingleElonlar = () => {
                   <TfiLocationPin className="single_right_footer_link_icons" />
                   Google kartadan aniqlash
                 </p>
-                <a className="single_right_footer_youtub_link" href="https://www.youtube.com">
+                <a
+                  className="single_right_footer_youtub_link"
+                  href="https://www.youtube.com"
+                >
                   <p className="single_right_footer_links">
                     <FiYoutube className="single_right_footer_link_icons" />
                     Youtubedan tomosha qilish
