@@ -1,0 +1,468 @@
+@font-face {
+    font-family: 'font400';
+    src: url('../../../assets/fonts/font400.ttf');
+}
+
+@font-face {
+    font-family: 'font500';
+    src: url('../../../assets/fonts/font500.ttf');
+}
+
+@font-face {
+    font-family: 'font600';
+    src: url('../../../assets/fonts/font600.ttf');
+}
+
+@font-face {
+    font-family: 'font800';
+    src: url('../../../assets/fonts/font800.ttf');
+}
+
+.elon {
+    width: 100%;
+    padding: 0px 20px;
+    margin-bottom: 128px;
+}
+
+.elon_container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.elon_header {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-top: 41px;
+    margin-bottom: 53px;
+}
+
+.elon_home_icons {
+    color: #006AFF;
+    font-size: 20px;
+}
+
+.elon_home_header_text {
+    font-family: 'font400';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+}
+
+.elon_content_form {
+    max-width: 735px;
+    margin: 0 auto;
+}
+
+.elon_berish {
+    margin-bottom: 86px;
+}
+
+.elon_berish_title {
+    margin-bottom: 37px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    font-family: 'font500';
+    color: #000000;
+}
+
+.elon_berish_content {
+    width: 100%;
+    height: auto;
+    border: 1px solid rgba(51, 51, 51, 0.1);
+    border-radius: 2px;
+    margin-bottom: 50px;
+    padding: 40px 50px 55px 35px;
+}
+
+.elon_berish_content_title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    font-family: 'font500';
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+.elon_berish_content_text_sana {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #333333;
+    opacity: 0.4;
+    margin-bottom: 14px;
+}
+
+.elon_sana_input_group {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.elon_sana_input {
+    width: auto;
+    padding: 15px 20px;
+    background: #f3f0f0;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    outline: none
+}
+
+/* elon yunalish input group */
+.elon_yunalish_input_group {
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.elon_yunalish_input_div {
+    width: 50%;
+}
+
+.elon_yunalish_select_value {
+    width: 100%;
+    padding: 17px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #333333;
+    font-family: 'font400';
+    background-color: #f3f0f0;
+    border: 1px solid transparent;
+    outline: none;
+}
+
+.elon_yunalish_select_title_text {
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-family: 'font400';
+    font-size: 12px;
+    line-height: 14px;
+    color: #333333;
+}
+
+/* elon tadbir turi */
+
+.elon_tadbir_turi_input_group {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+}
+
+.elon_tadbir_turi_input_div {
+    width: 50%;
+}
+
+.elon_tadbir_turi_input_title_text {
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-family: 'font400';
+    font-size: 12px;
+    line-height: 14px;
+    color: #333333;
+}
+
+.elon_tadbir_turi_div {
+    width: 100%;
+    height: 50px;
+    background-color: #f3f0f0;
+    border: 1px solid transparent;
+    outline: none;
+}
+
+.elon_tadbirturi_input_radio_div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+    height: 100%;
+}
+
+.elon_tadbirturi_radi_input_label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.elon_tadbirturi_input_link {
+    width: 100%;
+    height: 100%;
+    padding: 0px 20px;
+    outline: none;
+    border: 1px solid transparent;
+    background-color: transparent;
+}
+
+/* tashkilotchi */
+.elon_tashkilotchi_title {
+    margin-bottom: 59px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    font-family: 'font500';
+    color: #000000;
+}
+
+.elon_tashkilotchi_content {
+    width: 100%;
+    height: auto;
+    border: 1px solid rgba(51, 51, 51, 0.1);
+    border-radius: 2px;
+    margin-bottom: 50px;
+    padding: 34px 27px 69px 58px;
+}
+
+.elon_tashkilotchi_text_input_group {
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.elon_tashkilotchi_text_input_div {
+    width: 50%;
+    height: 50px;
+}
+
+.elon_tashkilotchi_text_input_title {
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    font-family: 'font400';
+    color: #333333;
+}
+
+.elon_tashkilotchi_text_input {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: 1px solid transparent;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    font-family: 'font400';
+    color: #333333;
+    padding: 0px 16px;
+    background-color: #f3f0f0;
+}
+
+.elon_tashkilotchi_number_input_group {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+}
+
+.elon_tashkilotchi_number_input_div {
+    width: 50%;
+    height: 50px;
+}
+
+.elon_tashkilotchi_number_input_title {
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    font-family: 'font400';
+    color: #333333;
+}
+
+.elon_tashkilotchi_number_input {
+    width: 100%;
+    height: 100%;
+    padding: 0px 16px;
+    outline: none;
+    border: 1px solid transparent;
+    background-color: #f3f0f0;
+}
+
+/* post */
+.post {
+    width: 100%;
+    height: auto;
+    border: 1px solid rgba(51, 51, 51, 0.1);
+    border-radius: 2px;
+    padding: 40px 50px 60px 35px;
+}
+
+.post_title {
+    margin-bottom: 18px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    font-family: 'font400';
+    color: #000000;
+}
+
+.post_header_title_text {
+    margin-bottom: 86px;
+    font-weight: 400;
+    font-size: 32px;
+    font-family: 'font400';
+    line-height: 42px;
+    color: #333333;
+    opacity: 0.2;
+}
+
+.post_description_input_title {
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #333333;
+    font-family: 'font400';
+}
+
+.post_description_input {
+    width: 100%;
+    height: 50px;
+    padding: 0px 16px;
+    outline: none;
+    border: 1px solid transparent;
+    background-color: #f3f0f0;
+    margin-bottom: 41px;
+}
+
+.post_images_input_title {
+    font-family: 'font400';
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #333333;
+}
+
+.post_images_upload_input_div {
+    display: flex;
+    gap: 50px;
+}
+
+@media only screen and (max-width:650px) {
+    .elon {
+        padding: 0px 10px;
+        margin-bottom: 50px;
+    }
+
+    .elon_header {
+        display: none;
+    }
+
+
+    .elon_content_form {
+        max-width: 735px;
+        margin: 0 auto;
+    }
+
+    .elon_berish {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+}
+
+
+
+
+
+@media only screen and (max-width:500px) {
+    .elon {
+        padding: 0px 10px;
+        margin-bottom: 30px;
+    }
+
+
+
+    .elon_content_form {
+        max-width: 100%;
+    }
+
+    .elon_berish_title {
+        margin-bottom: 30px;
+    }
+
+    .elon_berish_content {
+        margin-bottom: 25px;
+        padding: 25px 15px 30px 15px;
+    }
+
+    .elon_berish_content_title {
+        margin-bottom: 20px;
+    }
+
+    .elon_berish_content_text_sana {
+        margin-bottom: 15px;
+    }
+
+    .elon_sana_input_group {
+        gap: 27px;
+    }
+
+    .elon_sana_input {
+        padding: 12px 17px;
+    }
+
+    /* elon yunalish input group */
+    .elon_yunalish_input_group {
+        flex-direction: column;
+    }
+
+    .elon_yunalish_input_div {
+        width: 100%;
+    }
+
+
+    /* elon tadbir turi */
+
+    .elon_tadbir_turi_input_group {
+        flex-direction: column;
+    }
+
+    .elon_tadbir_turi_input_div {
+        width: 100%;
+    }
+
+    .elon_tadbirturi_input_radio_div {
+        gap: 60px;
+    }
+
+    .elon_tadbirturi_radi_input_label {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    /* tashkilotchi */
+    .elon_tashkilotchi_title {
+        margin-bottom: 30px;
+    }
+
+    .elon_tashkilotchi_content {
+        margin-bottom: 30px;
+        padding: 25px 15px 36px 15px;
+    }
+
+    .elon_tashkilotchi_text_input_group {
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 35px;
+    }
+
+    .elon_tashkilotchi_text_input_div {
+        width: 100%;
+    }
+
+
+
+    .elon_tashkilotchi_number_input_group {
+        flex-direction: column;
+    }
+
+    .elon_tashkilotchi_number_input_div {
+        width: 100%;
+    }
+
+}
