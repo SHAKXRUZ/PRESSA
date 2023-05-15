@@ -56,7 +56,7 @@ const Elon = () => {
     setElon_img_url(data2.secure_url);
   };
 
-  const elon = (e) => {
+  const elon = async (e) => {
     e.preventDefault();
     let {
       url,
@@ -66,27 +66,45 @@ const Elon = () => {
       telifon2,
       description,
       mavzumatni,
+      file,
     } = e.target;
 
-    const data = JSON.stringify({
-      sana: sanaValue,
-      vaqt: vaqtValue,
-      yunalish: bulimValue,
-      ichki_yunalish: ichkiBulimValue,
-      tadbir_turi: radioValue,
-      link: url.value,
-      ismsharif: ismsharif.value,
-      professiya: professiya.value,
-      telifon1: telifon1.value,
-      telifon2: telifon2.value,
-      description: description.value,
-      mavzumatni: mavzumatni.value,
-      img_url: elon_img_url,
-    });
+    await fetch("http://localhost:5000/elon/create", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        sanaValue,
+        vaqtValue,
+        bulimValue,
+        ichkiBulimValue,
+        radioValue,
+        link: url.value,
+        ismsharif: ismsharif.value,
+        professiya: professiya.value,
+        telifon1: telifon1.value,
+        telifon2: telifon2.value,
+        description: description.value,
+        mavzumatni: mavzumatni.value,
+        elon_img_url,
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        alert(data.msg);
 
-    console.log(data);
+        if (data.msg === "Create elon!") {
+          url.value = "";
+          ismsharif.value = "";
+          professiya.value = "";
+          telifon1.value = "";
+          telifon2.value = "";
+          description.value = "";
+          mavzumatni.value = "";
+          file.value = "";
+        }
+      });
   };
-
+console.log(elon_img_url);
   return (
     <div className="elon">
       <div className="elon_container">
@@ -214,6 +232,8 @@ const Elon = () => {
                       type="url"
                       required
                       placeholder="Link kiriting..."
+                      minlength="20"
+                      maxLength="100"
                     />
                   </div>
                 </div>
@@ -234,6 +254,8 @@ const Elon = () => {
                     type="text"
                     required
                     placeholder="Ismi sharifi..."
+                    minlength="10"
+                    maxLength="30"
                   />
                 </div>
 
@@ -247,6 +269,8 @@ const Elon = () => {
                     type="text"
                     required
                     placeholder="Professiya..."
+                    minlength="3"
+                    maxLength="30"
                   />
                 </div>
               </div>
@@ -262,6 +286,8 @@ const Elon = () => {
                     type="tel"
                     required
                     placeholder="+998"
+                    minlength="9"
+                    maxLength="20"
                   />
                 </div>
 
@@ -275,6 +301,8 @@ const Elon = () => {
                     type="tel"
                     required
                     placeholder="+998"
+                    minlength="9"
+                    maxLength="20"
                   />
                 </div>
               </div>
@@ -294,6 +322,8 @@ const Elon = () => {
               id="description"
               placeholder="Description..."
               required
+              minlength="10"
+              maxLength="100"
             />
 
             <p className="post_images_input_title">Rasm yuklash</p>
@@ -317,15 +347,15 @@ const Elon = () => {
               Yuklanyotgan rasm o’lchami 1080x1080 hajmi 2 mb dan oshmasin
             </p>
             <p className="post_mavzu_matni_title_text">Mavzu matni</p>
-
             <textarea
               className="post_mavzu_matni_textarea"
               name="mavzumatni"
               id="mavzumatni"
               placeholder="Mavzu matni"
               required
+              minlength="20"
+              maxLength="1000"
             ></textarea>
-
             <div className="elon_footer_btn_div">
               <p className="elon_bekor_qilish_btn">Bekor qilish</p>
               <button className="elon_submit_btn" type="submit">

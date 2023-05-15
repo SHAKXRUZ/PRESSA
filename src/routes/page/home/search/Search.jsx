@@ -1,11 +1,11 @@
 import "./Search.css";
-import { useState } from "react";
-import data from "../../../../data.json";
+import { useState, useEffect } from "react";
 const Search = () => {
   const [sanaValue, setSanaValue] = useState("2003-06-25");
   const [bulimValue, setBulimValue] = useState("Web dasturlash");
   const [radioValue, setRadioValue] = useState("online");
   const [surnameValue, setSurnameValue] = useState("shakhruz1");
+  const [elon, setElon] = useState([]);
 
   function bulimFunction(e) {
     setBulimValue(e.target.value);
@@ -23,6 +23,14 @@ const Search = () => {
   console.log(bulimValue);
   console.log(radioValue);
   console.log(surnameValue);
+
+  useEffect(() => {
+    fetch("http://localhost:5000/elon/list", {
+      method: "GET",
+    })
+      .then((res) => res.json())
+      .then((data) => setElon(data));
+  }, []);
 
   return (
     <div className="search">
@@ -80,11 +88,14 @@ const Search = () => {
 
           <div className="search_form_input_div">
             <select className="search_bulim_input" onChange={surnameFunction}>
-              {data.map((d, idx) => (
-                <option key={idx} value={d.name}>
-                  {d.name}
-                </option>
-              ))}
+              {elon &&
+                elon.map((e, idx) =>
+                  e.tasdiqlangan === "true" ? (
+                    <option key={idx} value={e.ismsharif}>
+                      {e.ismsharif}
+                    </option>
+                  ) : null
+                )}
             </select>
           </div>
 
