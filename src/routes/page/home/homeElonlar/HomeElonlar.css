@@ -1,0 +1,99 @@
+@font-face {
+    font-family: 'font400';
+    src: url('../../../../assets/fonts/font400.ttf');
+}
+
+@font-face {
+    font-family: 'font500';
+    src: url('../../../../assets/fonts/font500.ttf');
+}
+
+@font-face {
+    font-family: 'font600';
+    src: url('../../../../assets/fonts/font600.ttf');
+}
+
+@font-face {
+    font-family: 'font800';
+    src: url('../../../../assets/fonts/font800.ttf');
+}
+
+.home_elonlar {
+    width: 100%;
+    padding: 0px 20px;
+    margin: 149px 0px 160px 0px;
+
+}
+
+.home_elonlar_container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.home_elonlar_title {
+    margin-bottom: 50px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+}
+
+.home_elonlar_card_group {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 70px;
+}
+
+.elon_card {
+    width: 100%;
+    height: auto;
+    border: 1px solid rgba(51, 51, 51, 0.2);
+    border-radius: 5px;
+}
+
+.elon_card_images {
+    width: 100%;
+    height: 431px;
+}
+
+.elon_card_footer_div {
+    padding: 20px 0px 57px 30px;
+}
+
+.elon_card_description {
+    margin-bottom: 27px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 34px;
+    color: #333333;
+    font-family: 'font600';
+    max-width: 377px;
+}
+
+.elon_card_elon_malumot_div {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 0px 35px 0px 0px;
+}
+
+.elon_card_text_div {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.elon_card_text_div_icon_and_text {
+    display: flex;
+    gap: 10px;
+    font-weight: 500;
+    font-size: 18px;
+    font-family: 'font500';
+    line-height: 21px;
+    color: #333333;
+}
+
+.elon_card_icons{
+    color: #006AFF;
+    font-size: 20px;
+}

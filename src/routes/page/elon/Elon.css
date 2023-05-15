@@ -338,7 +338,9 @@
 
 .post_images_upload_input_div {
     display: flex;
-    gap: 50px;
+    align-items: center;
+    gap: 20px;
+    position: relative;
 }
 
 .post_images_upload_input {
