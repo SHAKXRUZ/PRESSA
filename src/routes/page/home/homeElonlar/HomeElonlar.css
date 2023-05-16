@@ -22,7 +22,6 @@
     width: 100%;
     padding: 0px 20px;
     margin: 149px 0px 160px 0px;
-
 }
 
 .home_elonlar_container {
@@ -99,4 +98,182 @@
     font-size: 20px;
 }
 
+.home_elonlar_btn_kuproq_div {
+    display: flex;
+    justify-content: center;
+}
 
+.heome_elonlar_kuproq_btn {
+    /* display: flex; */
+    margin-top: 68px;
+    width: 148px;
+    height: 51px;
+    background: #006AFF;
+    border-radius: 5px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    font-family: 'font400';
+    cursor: pointer;
+    transition: .5s;
+    border: 1px solid transparent;
+}
+
+.heome_elonlar_kuproq_btn:hover {
+    background-color: transparent;
+    border-color: #006AFF;
+    color: #006AFF;
+    transition: .5s;
+}
+
+@media only screen and (max-width:1200px) {
+    .home_elonlar {
+        margin: 100px 0px 100px 0px;
+    }
+
+    .home_elonlar_card_group {
+        gap: 30px;
+    }
+
+    .elon_card_images {
+        height: 400px;
+    }
+
+    .elon_card_footer_div {
+        padding: 20px;
+    }
+
+    .elon_card_description {
+        margin-bottom: 20px;
+        font-size: 22px;
+        line-height: 30px;
+        max-width: 100%;
+        height: 120px;
+    }
+
+    .elon_card_elon_malumot_div {
+        padding: 0px;
+    }
+
+    .elon_card_text_div {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .elon_card_text_div_icon_and_text {
+        height: 50px;
+    }
+}
+
+@media only screen and (max-width:1000px) {
+    .home_elonlar {
+        margin: 50px 0px 50px 0px;
+    }
+
+    .home_elonlar_card_group {
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+    }
+
+    .elon_card_images {
+        height: 350px;
+    }
+
+    .elon_card_footer_div {
+        padding: 30px;
+    }
+
+    .elon_card_description {
+        margin-bottom: 10px;
+        line-height: 30px;
+        height: 120px;
+    }
+
+    .elon_card_text_div_icon_and_text {
+        height: 30px;
+    }
+}
+
+@media only screen and (max-width:768px) {
+
+    .home_elonlar_card_group {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .elon_card_images {
+        height: auto;
+    }
+
+    .elon_card_footer_div {
+        padding: 25px;
+    }
+
+    .elon_card_description {
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .elon_card_text_div_icon_and_text {
+        height: 25px;
+    }
+}
+
+@media only screen and (max-width:650px) {
+    .home_elonlar {
+        padding: 0px 10px;
+    }
+}
+
+@media only screen and (max-width:400px) {
+
+    .home_elonlar_title {
+        margin-bottom: 25px;
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    .home_elonlar_card_group {
+        gap: 20px;
+    }
+
+    .elon_card_images {
+        height: auto;
+    }
+
+    .elon_card_footer_div {
+        padding: 20px;
+    }
+
+    .elon_card_description {
+        margin-bottom: 20px;
+        font-size: 20px;
+        line-height: 28px;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .elon_card_elon_malumot_div {
+        padding: 0px;
+    }
+
+    .elon_card_text_div {
+        gap: 20px;
+    }
+
+    .elon_card_text_div_icon_and_text {
+        font-size: 16px;
+        height: 40px;
+    }
+
+    .heome_elonlar_kuproq_btn {
+        margin-top: 50px;
+        width: 140px;
+        height: 50px;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+}

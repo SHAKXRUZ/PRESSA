@@ -7,6 +7,7 @@ import { AiOutlineClockCircle, AiOutlineEye } from "react-icons/ai";
 import { HiOutlineStatusOnline, HiOutlineStatusOffline } from "react-icons/hi";
 
 const HomeElonlar = () => {
+  const [elonLimit, setElonLimit] = useState(9);
   const [elon, setElon] = useState([]);
   useEffect(() => {
     fetch("http://localhost:5000/elon/list", {
@@ -23,7 +24,7 @@ const HomeElonlar = () => {
           <p className="home_elonlar_title">Oxirgi e’lonlar</p>
           <div className="home_elonlar_card_group">
             {elon &&
-              elon.map((e, idx) =>
+              elon.slice(0, elonLimit).map((e, idx) =>
                 e.tasdiqlangan === "true" ? (
                   <div key={idx} className="elon_card">
                     <img
@@ -78,6 +79,15 @@ const HomeElonlar = () => {
                 ) : null
               )}
           </div>
+     <div className="home_elonlar_btn_kuproq_div">
+     <button className="heome_elonlar_kuproq_btn"
+            onClick={() => {
+              elonLimit <= 9 ? setElonLimit(elon.length) : setElonLimit(9);
+            }}
+          >
+            {elonLimit === 9 ? "Ko’proq ko’rish" : "Kamroq ko’rish"}
+          </button>
+     </div>
         </div>
       </div>
     </div>
