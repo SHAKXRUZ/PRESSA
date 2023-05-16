@@ -1,7 +1,16 @@
 import "./Search.css";
 import { useState, useEffect } from "react";
 const Search = () => {
-  const [sanaValue, setSanaValue] = useState("2003-06-25");
+  const date = new Date();
+  const bugun =
+    date.getFullYear() +
+    "-" +
+    "0" +
+    (date.getMonth() + 1) +
+    "-" +
+    date.getDate();
+
+  const [sanaValue, setSanaValue] = useState(bugun);
   const [bulimValue, setBulimValue] = useState("Web dasturlash");
   const [radioValue, setRadioValue] = useState("online");
   const [surnameValue, setSurnameValue] = useState("shakhruz1");
