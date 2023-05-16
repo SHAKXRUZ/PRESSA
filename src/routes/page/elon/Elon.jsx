@@ -1,12 +1,12 @@
 import "./Elon.css";
 import { useState } from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { BiHomeAlt } from "react-icons/bi";
 import { BsCloudUpload } from "react-icons/bs";
 import { FiX } from "react-icons/fi";
 
 const Elon = () => {
-  const [createElon, setCreateElon] = useState(true);
+  const [createElon, setCreateElon] = useState(false);
 
   if (createElon === true) {
     document.body.style.overflow = "hidden";
@@ -101,9 +101,12 @@ const Elon = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        alert(data.msg);
-
         if (data.msg === "Create elon!") {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+          setCreateElon(true);
           url.value = "";
           ismsharif.value = "";
           professiya.value = "";
@@ -367,7 +370,9 @@ const Elon = () => {
               maxLength="1000"
             ></textarea>
             <div className="elon_footer_btn_div">
-              <p className="elon_bekor_qilish_btn">Bekor qilish</p>
+              <Link to="/" className="elon_bekor_qilish_btn">
+                Bekor qilish
+              </Link>
               <button className="elon_submit_btn" type="submit">
                 E’lonni yuborish
               </button>
@@ -395,11 +400,16 @@ const Elon = () => {
               <p className="create_elon_content_title">
                 Sizning e’loningiz yuborildi
               </p>
-              <p className="create_elon_content_title">
+              <p className="create_elon_content_text">
                 Yaqin soatlar ichda admin tomonidan tekshirib chiqladi va saytda
                 e’lon qilinadi!
               </p>
-              <button className="create_elon_content_btn">OK</button>
+              <button
+                onClick={() => setCreateElon(false)}
+                className="create_elon_content_btn"
+              >
+                OK
+              </button>
             </div>
           </div>
         </div>
