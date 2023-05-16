@@ -9,6 +9,8 @@ import { HiOutlineStatusOnline, HiOutlineStatusOffline } from "react-icons/hi";
 const HomeElonlar = () => {
   const [elonLimit, setElonLimit] = useState(9);
   const [elon, setElon] = useState([]);
+  const [search, setSearch] = useState([]);
+
   useEffect(() => {
     fetch("http://localhost:5000/elon/list", {
       method: "GET",
@@ -16,7 +18,19 @@ const HomeElonlar = () => {
       .then((res) => res.json())
       .then((data) => setElon(data));
   }, []);
-  // console.log(elon);
+
+  console.log(elon);
+
+  useEffect(() => {
+    fetch("http://localhost:5000/elon/header_search", {
+      method: "GET",
+    })
+      .then((res) => res.json())
+      .then((search) => setSearch(search));
+  }, []);
+
+  console.log(search);
+  
   return (
     <div className="home_elonlar">
       <div className="home_elonlar_container">

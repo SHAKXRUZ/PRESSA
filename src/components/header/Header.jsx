@@ -12,6 +12,19 @@ const Header = () => {
   } else {
     document.body.style.overflow = "auto";
   }
+
+  const searchFunction = async (e) => {
+    e.preventDefault();
+    let { search } = e.target;
+
+    await fetch("http://localhost:5000/elon/header_search", {
+      method: "GET",
+      headers: { search: search.value },
+    })
+      .then((res) => res.json())
+      .then((data) => alert(data.msg));
+  };
+
   return (
     <div>
       <header className="header">
@@ -26,7 +39,10 @@ const Header = () => {
                 />
               </Link>
               <div className="header_right_div">
-                <form className="header_search_form">
+                <form
+                  onSubmit={(e) => searchFunction(e)}
+                  className="header_search_form"
+                >
                   <div className="search_div">
                     <button className="submit_btn" type="submit">
                       <FiSearch />
@@ -34,6 +50,8 @@ const Header = () => {
                     <input
                       className="search_input_header"
                       type="text"
+                      name="search"
+                      id="search"
                       placeholder="Izlash"
                       required
                     />
