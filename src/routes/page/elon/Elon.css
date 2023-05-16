@@ -422,6 +422,7 @@
     align-items: center;
     justify-content: center;
     font-family: 'font400';
+    text-decoration: none;
 }
 
 .elon_submit_btn {
@@ -453,6 +454,105 @@
     opacity: 1;
 }
 
+
+
+.create_elon_overflow {
+    width: 100vw;
+    height: 100%;
+    background-color: #0000006f;
+    position: absolute;
+    left: 0px;
+    top: 0;
+    z-index: 5;
+}
+
+
+
+.create_elon_container {
+    width: 549px;
+    height: auto;
+    background: #FFFFFF;
+    border-radius: 20px;
+    margin: 0;
+    position: absolute;
+    top: 51.5%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 250;
+    border-radius: 10px;
+}
+
+
+.create_elon_modal_exit {
+    width: 55px;
+    height: 55px;
+    background: #006AFF;
+    position: absolute;
+    right: 0px;
+    border-radius: 0px 10px 0px 0px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    transition: .5s;
+    font-size: 30px;
+    color: #FFFFFF;
+    margin-bottom: 97px;
+}
+
+.create_elon_modal_exit:hover {
+    background-color: red;
+    border-color: red;
+}
+
+.create_elon_content {
+    margin: 130px 0px 75px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.create_elon_content_title {
+    margin-bottom: 35px;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 43px;
+    color: #000000;
+}
+
+.create_elon_content_text {
+    text-align: center;
+    margin-bottom: 128px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 35px;
+    color: #000000;
+}
+
+.create_elon_content_btn {
+    width: 99px;
+    height: 51px;
+    background: #006AFF;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .5s;
+    border: 1px solid transparent;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 35px;
+    color: white;
+}
+
+.create_elon_content_btn:hover {
+    color: #006AFF;
+    border-color: #006AFF;
+    background-color: transparent;
+    transition: .5s;
+}
+
 @media only screen and (max-width:650px) {
     .elon {
         padding: 0px 10px;
@@ -471,6 +571,43 @@
     .elon_berish {
         margin-top: 30px;
         margin-bottom: 30px;
+    }
+
+    .create_elon_container {
+        width: 320px;
+        border-radius: 10px;
+    }
+
+
+    .create_elon_modal_exit {
+        width: 35px;
+        height: 35px;
+        margin-bottom: 0px;
+    }
+
+
+    .create_elon_content {
+        margin: 75px 0px 50px 0px;
+    }
+
+    .create_elon_content_title {
+        margin-bottom: 15px;
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .create_elon_content_text {
+        margin-bottom: 25px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .create_elon_content_btn {
+        width: 70px;
+        height: 35px;
+        font-size: 18px;
+        line-height: 30px;
     }
 
 }
@@ -612,70 +749,33 @@
 }
 
 
+@media only screen and (max-width:400px) {
 
-.create_elon_overflow {
-    width: 100vw;
-    height: 100vh;
-    background-color: #0000006f;
-    position: absolute;
-    left: 0px;
-    top: 0;
-    z-index: 5;
-}
+    .create_elon_container {
+        width: 280px;
+    }
 
 
-
-.create_elon_container {
-    width: 549px;
-    height: 532px;
-    background: #FFFFFF;
-    border-radius: 20px;
-    margin: 0;
-    position: absolute;
-    top: 51.5%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    z-index: 250;
-    border-radius: 10px;
-}
+    .create_elon_modal_exit {
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+    }
 
 
-.create_elon_modal_exit {
-    width: 55px;
-    height: 55px;
-    background: #006AFF;
-    position: absolute;
-    right: 0px;
-    border-radius: 0px 10px 0px 0px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid transparent;
-    transition: .5s;
-    font-size: 30px;
-    color: #FFFFFF;
-    margin-bottom: 97px;
-}
+    .create_elon_content {
+        margin: 50px 0px 30px 0px;
+    }
 
-.create_elon_modal_exit:hover {
-    background-color: red;
-    border-color: red;
-}
+    .create_elon_content_title {
+        margin-bottom: 15px;
+        font-size: 20px;
+        line-height: 28px;
+    }
 
-.create_elon_content {
-    margin: 130px 0px 75px 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.create_elon_content_title {
-    margin-bottom: 35px;
-    font-weight: 600;
-    font-size: 36px;
-    line-height: 43px;
-    color: #000000;
+    .create_elon_content_text {
+        margin-bottom: 25px;
+        font-size: 18px;
+        line-height: 24px;
+    }
 }

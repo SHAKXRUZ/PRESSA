@@ -16,7 +16,7 @@ const HomeElonlar = () => {
       .then((res) => res.json())
       .then((data) => setElon(data));
   }, []);
-
+  // console.log(elon);
   return (
     <div className="home_elonlar">
       <div className="home_elonlar_container">
@@ -79,15 +79,16 @@ const HomeElonlar = () => {
                 ) : null
               )}
           </div>
-     <div className="home_elonlar_btn_kuproq_div">
-     <button className="heome_elonlar_kuproq_btn"
-            onClick={() => {
-              elonLimit <= 9 ? setElonLimit(elon.length) : setElonLimit(9);
-            }}
-          >
-            {elonLimit === 9 ? "Ko’proq ko’rish" : "Kamroq ko’rish"}
-          </button>
-     </div>
+          <div className="home_elonlar_btn_kuproq_div">
+            <button
+              className="heome_elonlar_kuproq_btn"
+              onClick={() => {
+                elonLimit <= 9 ? setElonLimit(elon.length) : setElonLimit(9);
+              }}
+            >
+              {elonLimit === 9 ? "Ko’proq ko’rish" : "Kamroq ko’rish"}
+            </button>
+          </div>
         </div>
       </div>
     </div>
