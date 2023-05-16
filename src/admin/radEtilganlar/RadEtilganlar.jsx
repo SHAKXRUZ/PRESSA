@@ -1,8 +1,12 @@
-import './RadEtilganlar.css'
+import "./RadEtilganlar.css";
 const RadEtilganlar = () => {
   return (
-    <div>RadEtilganlar</div>
-  )
-}
+    <div className="radetilgan">
+      <div className="radetilgan_container">
+        <div className="radetilgan_content">RadEtilganlar</div>
+      </div>
+    </div>
+  );
+};
 
-export default RadEtilganlar
+export default RadEtilganlar;
