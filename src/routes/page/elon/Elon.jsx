@@ -1,8 +1,19 @@
 import "./Elon.css";
 import { useState } from "react";
+// import { Link } from "react-router-dom";
 import { BiHomeAlt } from "react-icons/bi";
 import { BsCloudUpload } from "react-icons/bs";
+import { FiX } from "react-icons/fi";
+
 const Elon = () => {
+  const [createElon, setCreateElon] = useState(true);
+
+  if (createElon === true) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "auto";
+  }
+
   const date = new Date();
   const bugun =
     date.getFullYear() +
@@ -104,7 +115,6 @@ const Elon = () => {
         }
       });
   };
-console.log(elon_img_url);
   return (
     <div className="elon">
       <div className="elon_container">
@@ -365,6 +375,35 @@ console.log(elon_img_url);
           </div>
         </form>
       </div>
+
+      {createElon && (
+        <div className="create_elon">
+          <div
+            onClick={() => setCreateElon(false)}
+            className="create_elon_overflow"
+          ></div>
+
+          <div className="create_elon_container">
+            <span
+              onClick={() => setCreateElon(false)}
+              className="create_elon_modal_exit"
+            >
+              <FiX className="create_elon_modal_exit_icons" />
+            </span>
+
+            <div className="create_elon_content">
+              <p className="create_elon_content_title">
+                Sizning e’loningiz yuborildi
+              </p>
+              <p className="create_elon_content_title">
+                Yaqin soatlar ichda admin tomonidan tekshirib chiqladi va saytda
+                e’lon qilinadi!
+              </p>
+              <button className="create_elon_content_btn">OK</button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

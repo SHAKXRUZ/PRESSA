@@ -610,3 +610,72 @@
         height: 45px;
     }
 }
+
+
+
+.create_elon_overflow {
+    width: 100vw;
+    height: 100vh;
+    background-color: #0000006f;
+    position: absolute;
+    left: 0px;
+    top: 0;
+    z-index: 5;
+}
+
+
+
+.create_elon_container {
+    width: 549px;
+    height: 532px;
+    background: #FFFFFF;
+    border-radius: 20px;
+    margin: 0;
+    position: absolute;
+    top: 51.5%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 250;
+    border-radius: 10px;
+}
+
+
+.create_elon_modal_exit {
+    width: 55px;
+    height: 55px;
+    background: #006AFF;
+    position: absolute;
+    right: 0px;
+    border-radius: 0px 10px 0px 0px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    transition: .5s;
+    font-size: 30px;
+    color: #FFFFFF;
+    margin-bottom: 97px;
+}
+
+.create_elon_modal_exit:hover {
+    background-color: red;
+    border-color: red;
+}
+
+.create_elon_content {
+    margin: 130px 0px 75px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.create_elon_content_title {
+    margin-bottom: 35px;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 43px;
+    color: #000000;
+}
