@@ -1,6 +1,6 @@
 import "./Kutilmoqda.css";
 const Kutilmoqda = () => {
-  return <div>Kutilmoqda</div>;
+  return <div className="kutilmoqda">Kutilmoqda</div>;
 };
 
 export default Kutilmoqda;
