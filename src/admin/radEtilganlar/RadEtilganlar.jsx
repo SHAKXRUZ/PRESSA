@@ -1,7 +1,7 @@
 import './RadEtilganlar.css'
 const RadEtilganlar = () => {
   return (
-    <div>RadEtilganlar</div>
+    <div className='radetilgan'>RadEtilganlar</div>
   )
 }
 

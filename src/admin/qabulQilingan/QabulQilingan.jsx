@@ -1,7 +1,7 @@
 import './QabulQilingan.css'
 const QabulQilingan = () => {
   return (
-    <div>QabulQilingan</div>
+    <div className='qabulqilingan'>  QabulQilingan</div>
   )
 }
 
