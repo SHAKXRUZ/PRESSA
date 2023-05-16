@@ -28,10 +28,10 @@ const Search = () => {
   const surnameFunction = (e) => {
     setSurnameValue(e.target.value);
   };
-  console.log(sanaValue);
-  console.log(bulimValue);
-  console.log(radioValue);
-  console.log(surnameValue);
+  // console.log(sanaValue);
+  // console.log(bulimValue);
+  // console.log(radioValue);
+  // console.log(surnameValue);
 
   useEffect(() => {
     fetch("http://localhost:5000/elon/list", {

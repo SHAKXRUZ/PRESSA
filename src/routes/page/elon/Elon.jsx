@@ -104,7 +104,7 @@ const Elon = () => {
         }
       });
   };
-console.log(elon_img_url);
+
   return (
     <div className="elon">
       <div className="elon_container">
@@ -153,6 +153,7 @@ console.log(elon_img_url);
                     <option value="Mobile dasturlash">Mobile dasturlash</option>
                     <option value="UI/UX dizayn">UI/UX dizayn</option>
                     <option value="Grafik dizayn">Grafik dizayn</option>
+                    <option value="SMM">SMM</option>
                     <option value="Menejment">Menejment</option>
                     <option value="Kredit va audit">Kredit va audit</option>
                     <option value="Matematika">Matematika</option>
@@ -233,7 +234,7 @@ console.log(elon_img_url);
                       required
                       placeholder="Link kiriting..."
                       minlength="20"
-                      maxLength="100"
+                      maxLength="80"
                     />
                   </div>
                 </div>
@@ -254,8 +255,8 @@ console.log(elon_img_url);
                     type="text"
                     required
                     placeholder="Ismi sharifi..."
-                    minlength="10"
-                    maxLength="30"
+                    minlength="5"
+                    maxLength="25"
                   />
                 </div>
 
@@ -270,7 +271,7 @@ console.log(elon_img_url);
                     required
                     placeholder="Professiya..."
                     minlength="3"
-                    maxLength="30"
+                    maxLength="10"
                   />
                 </div>
               </div>
@@ -323,7 +324,7 @@ console.log(elon_img_url);
               placeholder="Description..."
               required
               minlength="10"
-              maxLength="100"
+              maxLength="80"
             />
 
             <p className="post_images_input_title">Rasm yuklash</p>
