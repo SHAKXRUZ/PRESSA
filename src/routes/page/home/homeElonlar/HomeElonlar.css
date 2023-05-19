@@ -91,6 +91,7 @@
     font-family: 'font500';
     line-height: 21px;
     color: #333333;
+    text-transform: capitalize;
 }
 
 .elon_card_icons {

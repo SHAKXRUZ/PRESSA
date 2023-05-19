@@ -174,22 +174,29 @@ const Elon = () => {
                 </div>
                 <div className="elon_yunalish_input_div">
                   <p className="elon_yunalish_select_title_text">
-                    Ichki yo’nalish
+                    Ichki yoэnalish
                   </p>
                   <select
                     onChange={ichkiBulimFunction}
                     className="elon_yunalish_select_value"
                   >
                     <option value="Java developer">Java developer</option>
+                    <option value="Python developer">Python developer</option>
                     <option value="Frontent developer">
                       Frontent developer
                     </option>
+                    <option value="Backend developer">Backend developer</option>
                     <option value="Grafik dizayner">Grafik dizayner</option>
                     <option value="Moushn grafika">Moushn grafika</option>
                     <option value="Menejment">Menejment</option>
                     <option value="SMM">SMM</option>
                     <option value="Matematika">Matematika</option>
                     <option value="Fizika">Fizika</option>
+                    <option value="Biznesmen">Biznesmen</option>
+                    <option value="Tadbirkor">Tadbirkor</option>
+                    <option value="UI/UX dizayner">UI/UX dizayner</option>
+                    <option value="O'quv markaz">O'quv markaz</option>
+                    <option value="Marketing">Marketing</option>
                   </select>
                 </div>
               </div>
@@ -245,7 +252,7 @@ const Elon = () => {
                       type="url"
                       required
                       placeholder="Link kiriting..."
-                      minlength="20"
+                      minLength="20"
                       maxLength="100"
                     />
                   </div>
@@ -267,7 +274,7 @@ const Elon = () => {
                     type="text"
                     required
                     placeholder="Ismi sharifi..."
-                    minlength="10"
+                    minLength="10"
                     maxLength="30"
                   />
                 </div>
@@ -282,7 +289,7 @@ const Elon = () => {
                     type="text"
                     required
                     placeholder="Professiya..."
-                    minlength="3"
+                    minLength="3"
                     maxLength="30"
                   />
                 </div>
@@ -299,7 +306,7 @@ const Elon = () => {
                     type="tel"
                     required
                     placeholder="+998"
-                    minlength="9"
+                    minLength="9"
                     maxLength="20"
                   />
                 </div>
@@ -314,7 +321,7 @@ const Elon = () => {
                     type="tel"
                     required
                     placeholder="+998"
-                    minlength="9"
+                    minLength="9"
                     maxLength="20"
                   />
                 </div>
@@ -335,7 +342,7 @@ const Elon = () => {
               id="description"
               placeholder="Description..."
               required
-              minlength="10"
+              minLength="10"
               maxLength="100"
             />
 
@@ -357,7 +364,7 @@ const Elon = () => {
               </label>
             </div>
             <p className="post_images_upload_warning_text">
-              Yuklanyotgan rasm o’lchami 1080x1080 hajmi 2 mb dan oshmasin
+              Yuklanyotgan rasm o'lchami 1080x1080 hajmi 2 mb dan oshmasin
             </p>
             <p className="post_mavzu_matni_title_text">Mavzu matni</p>
             <textarea
@@ -366,7 +373,7 @@ const Elon = () => {
               id="mavzumatni"
               placeholder="Mavzu matni"
               required
-              minlength="20"
+              minLength="20"
               maxLength="1000"
             ></textarea>
             <div className="elon_footer_btn_div">
@@ -374,7 +381,7 @@ const Elon = () => {
                 Bekor qilish
               </Link>
               <button className="elon_submit_btn" type="submit">
-                E’lonni yuborish
+                E'lonni yuborish
               </button>
             </div>
           </div>
@@ -398,11 +405,11 @@ const Elon = () => {
 
             <div className="create_elon_content">
               <p className="create_elon_content_title">
-                Sizning e’loningiz yuborildi
+                Sizning e'loningiz yuborildi
               </p>
               <p className="create_elon_content_text">
                 Yaqin soatlar ichda admin tomonidan tekshirib chiqladi va saytda
-                e’lon qilinadi!
+                e'lon qilinadi!
               </p>
               <button
                 onClick={() => setCreateElon(false)}

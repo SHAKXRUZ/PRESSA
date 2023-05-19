@@ -226,6 +226,10 @@
     display: none;
 }
 
+.reklamalar_elon_card_text_and_icon {
+    text-transform: capitalize;
+}
+
 @media only screen and (max-width:1350px) {
     .singleElonlar {
         margin-bottom: 150px;

@@ -1,3 +1,23 @@
+@font-face {
+  font-family: 'font400';
+  src: url('../../../../assets/fonts/font400.ttf');
+}
+
+@font-face {
+  font-family: 'font500';
+  src: url('../../../../assets/fonts/font500.ttf');
+}
+
+@font-face {
+  font-family: 'font600';
+  src: url('../../../../assets/fonts/font600.ttf');
+}
+
+@font-face {
+  font-family: 'font800';
+  src: url('../../../../assets/fonts/font800.ttf');
+}
+
 .reklama_elonlar {
   width: 100%;
   padding: 0px 20px;

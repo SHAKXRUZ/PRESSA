@@ -159,6 +159,7 @@
     gap: 10px;
     cursor: pointer;
     transition: .2s;
+    text-transform: capitalize;
 }
 
 .bulim_input_label:hover {
@@ -173,6 +174,10 @@
 
 .ism_familya_modal_container:hover .ism_sharif_modal {
     display: flex;
+}
+
+.bulim_modal_title {
+    font-weight: 600;
 }
 
 @media only screen and (max-width:1000px) {

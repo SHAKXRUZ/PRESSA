@@ -22,7 +22,7 @@ const HomeElonlar = ({ data }) => {
     <div className="home_elonlar">
       <div className="home_elonlar_container">
         <div className="home_elonlar_content">
-          <p className="home_elonlar_title">Oxirgi e’lonlar</p>
+          <p className="home_elonlar_title">Oxirgi e'lonlar</p>
           <div className="home_elonlar_card_group">
             {data.length !== 0
               ? data.slice(0, elonLimit).map((e, idx) =>
@@ -62,7 +62,7 @@ const HomeElonlar = ({ data }) => {
                             <div className="elon_card_text_div">
                               <p className="elon_card_text_div_icon_and_text">
                                 <TbBuildingSkyscraper className="elon_card_icons" />
-                                {e.professiya}
+                                {e.ichki_yunalish}
                               </p>
                               <p className="elon_card_text_div_icon_and_text">
                                 <AiOutlineClockCircle className="elon_card_icons" />
