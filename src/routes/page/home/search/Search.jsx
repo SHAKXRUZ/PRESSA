@@ -1,37 +1,10 @@
 import "./Search.css";
 import { useState, useEffect } from "react";
-const Search = () => {
-  const date = new Date();
-  const bugun =
-    date.getFullYear() +
-    "-" +
-    "0" +
-    (date.getMonth() + 1) +
-    "-" +
-    date.getDate();
-
-  const [sanaValue, setSanaValue] = useState(bugun);
-  const [bulimValue, setBulimValue] = useState("Web dasturlash");
-  const [radioValue, setRadioValue] = useState("online");
-  const [surnameValue, setSurnameValue] = useState("shakhruz1");
+import { TbCategory2 } from "react-icons/tb";
+import { IoIosArrowDown } from "react-icons/io";
+import { BiUserCircle } from "react-icons/bi";
+const Search = ({ setData }) => {
   const [elon, setElon] = useState([]);
-
-  function bulimFunction(e) {
-    setBulimValue(e.target.value);
-  }
-  function sanaFunction(e) {
-    setSanaValue(e.target.value);
-  }
-  const radioFunction = (e) => {
-    setRadioValue(e.target.value);
-  };
-  const surnameFunction = (e) => {
-    setSurnameValue(e.target.value);
-  };
-  console.log(sanaValue);
-  console.log(bulimValue);
-  console.log(radioValue);
-  console.log(surnameValue);
 
   useEffect(() => {
     fetch("http://localhost:5000/elon/list", {
@@ -41,71 +14,132 @@ const Search = () => {
       .then((data) => setElon(data));
   }, []);
 
+  const searchHero = async (e) => {
+    e.preventDefault();
+    const { date, bulim, radio, ismsharif } = e.target;
+
+    await fetch("http://localhost:5000/elon/header_search", {
+      method: "GET",
+      headers: {
+        search: date.value || bulim.value || radio.value || ismsharif.value,
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => setData(data));
+    date.value = "";
+    bulim.value = "";
+    radio.value = "";
+    ismsharif.value = "";
+  };
+
   return (
     <div className="search">
+      <p className="box">
+        lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt,
+        quam?
+      </p>
       <div className="search_container">
-        <form className="search_form">
+        <form className="search_form" onSubmit={(e) => searchHero(e)}>
           <div className="search_form_input_div border_class">
-            <input
-              className="search_date_input"
-              defaultValue={sanaValue}
-              onChange={sanaFunction}
-              type="date"
-              name="date"
-              required
-            />
+            <input className="search_date_input" type="date" name="date" />
+          </div>
+
+          <div className="search_bulim_modal_container border_class">
+            <p className="bulim_modal_header">
+              <TbCategory2 className="bulim_modal_header_menu_icons" />
+              Bo'lim tanlang
+              <IoIosArrowDown className="bulim_modal_header_arrow_icons" />
+            </p>
+            <div className="bulim_modal">
+              <p className="bulim_modal_title">IT</p>
+
+              <label className="bulim_input_label">
+                <input type="radio" name="bulim" value="Web dasturlash" />
+                Web dasturlash
+              </label>
+
+              <label className="bulim_input_label">
+                <input type="radio" name="bulim" value="Mobile dasturlash" />
+                Mobile dasturlash
+              </label>
+
+              <p className="bulim_modal_title">Dizayn</p>
+
+              <label className="bulim_input_label">
+                <input type="radio" name="bulim" value="UI/UX dizayn" />
+                UI/UX dizayn
+              </label>
+              <label className="bulim_input_label">
+                <input type="radio" name="bulim" value="Grafik dizayn" />
+                Grafik dizayn
+              </label>
+
+              <p className="bulim_modal_title">Biznes</p>
+
+              <label className="bulim_input_label">
+                <input type="radio" name="bulim" value="Menejment" />
+                Menejment
+              </label>
+
+              <label className="bulim_input_label">
+                <input type="radio" name="bulim" value="Kredit va audit" />
+                Kredit va audit
+              </label>
+              <p className="bulim_modal_title">Ta'lim</p>
+              <label className="bulim_input_label">
+                <input type="radio" name="bulim" value="Matematika" />
+                Matematika
+              </label>
+              <label className="bulim_input_label">
+                <input type="radio" name="bulim" value="Fizika" />
+                Fizika
+              </label>
+            </div>
           </div>
 
           <div className="search_form_input_div border_class">
-            <select className="search_bulim_input" onChange={bulimFunction}>
-              <option value="Web dasturlash">Web dasturlash</option>
-              <option value="Mobile dasturlash">Mobile dasturlash</option>
-              <option value="UI/UX dizayn">UI/UX dizayn</option>
-              <option value="Grafik dizayn">Grafik dizayn</option>
-              <option value="Menejment">Menejment</option>
-              <option value="Kredit va audit">Kredit va audit</option>
-              <option value="Matematika">Matematika</option>
-              <option value="Fizika">Fizika</option>
-            </select>
-          </div>
-
-          <div className="search_form_input_div border_class">
-            <input
-              className="search_radio_input"
-              type="radio"
-              name="tanga"
-              value="online"
-              id="online"
-              defaultChecked
-              onChange={radioFunction}
-            />
-            <label className="search_radio_input" htmlFor="online">
+            <label className="search_radio_input" form="radio">
+              <input
+                className="search_radio_input"
+                type="radio"
+                name="radio"
+                value="online"
+              />
               Online
             </label>
-            <input
-              className="search_radio_input"
-              type="radio"
-              name="tanga"
-              value="offline"
-              id="offline"
-              onChange={radioFunction}
-            />
-            <label className="search_radio_input" htmlFor="offline">
+
+            <label className="search_radio_input" form="radio">
+              <input
+                className="search_radio_input"
+                type="radio"
+                name="radio"
+                value="offline"
+              />
               Offline
             </label>
           </div>
 
-          <div className="search_form_input_div">
-            <select className="search_bulim_input" onChange={surnameFunction}>
+          <div className="ism_familya_modal_container">
+            <p className="bulim_modal_header">
+              <BiUserCircle className="bulim_modal_header_menu_icons" />
+              Ism familya
+              <IoIosArrowDown className="ismsharif_modal_arrow_icons" />
+            </p>
+            <div className="ism_sharif_modal">
               {elon &&
                 elon.map((e, idx) =>
                   e.tasdiqlangan === "true" ? (
-                    <option key={idx} value={e.ismsharif}>
+                    <label key={idx} className="bulim_input_label">
+                      <input
+                        type="radio"
+                        name="ismsharif"
+                        value={e.ismsharif}
+                      />
                       {e.ismsharif}
-                    </option>
+                    </label>
                   ) : null
                 )}
-            </select>
+            </div>
           </div>
 
           <button className="search_form_btn" type="submit">

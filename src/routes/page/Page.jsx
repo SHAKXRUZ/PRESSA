@@ -5,12 +5,12 @@ import About from "./about/About";
 import Elon from "./elon/Elon";
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
-const Page = () => {
+const Page = ({ data, setData }) => {
   return (
     <>
       <Route exact path="/">
-        <Header />
-        <Home />
+        <Header setData={setData} />
+        <Home data={data} setData={setData}/>
         <Footer />
       </Route>
       <Route path="/single">

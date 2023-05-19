@@ -1,3 +1,7 @@
-.admin_panel{
+.admin_panel_flex{
     display: flex;
+}
+.admin_panel_header{
+    display: flex;
+    flex-direction: column;
 }

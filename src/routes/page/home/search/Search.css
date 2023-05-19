@@ -44,7 +44,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
+
 
 .border_class {
     border-right: 1px solid #767373;
@@ -52,15 +54,19 @@
 
 
 
-.search_date_input,
-.search_bulim_input {
+.search_date_input {
     border: 1px solid transparent;
     outline: none;
     font-size: 16px;
 }
 
 .search_radio_input {
-    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-left: 10px;
+    cursor: pointer;
 }
 
 .search_form_btn {
@@ -83,6 +89,91 @@
     transition: .5s;
 }
 
+.search_bulim_modal_container,
+.ism_familya_modal_container {
+    width: 22%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.bulim_modal_header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.bulim_modal,
+.ism_sharif_modal {
+    width: 100%;
+    height: 420px;
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    background: white;
+    box-shadow: 2px 4px 11px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 30px;
+}
+
+.ism_sharif_modal {
+    overflow: auto;
+}
+
+.ism_sharif_modal::-webkit-scrollbar {
+    width: 5px;
+}
+
+.ism_sharif_modal::-webkit-scrollbar-thumb {
+    background-color: dodgerblue;
+    border-radius: 20px;
+}
+
+.search_bulim_modal_container:hover .bulim_modal {
+    display: flex;
+}
+
+.search_bulim_modal_container:hover .bulim_modal_header_arrow_icons {
+    transform: rotate(180deg);
+}
+
+.ism_familya_modal_container:hover .ismsharif_modal_arrow_icons {
+    transform: rotate(180deg);
+}
+
+.bulim_modal_header_arrow_icons,
+.ismsharif_modal_arrow_icons {
+    transition: 0.1s;
+    color: #333;
+}
+
+.bulim_input_label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.bulim_input_label:hover {
+    color: dodgerblue;
+    transition: .2s;
+}
+
+.bulim_modal_header_menu_icons {
+    color: #006AFF;
+    font-size: 20px;
+}
+
+.ism_familya_modal_container:hover .ism_sharif_modal {
+    display: flex;
+}
 
 @media only screen and (max-width:1000px) {
     .search {

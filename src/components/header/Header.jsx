@@ -1,11 +1,11 @@
 import "./Header.css";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import logo from "../../assets/images/header_logo.svg";
 import { FiSearch, FiMenu, FiX } from "react-icons/fi";
 import { AiOutlinePlus } from "react-icons/ai";
 import { GoSettings } from "react-icons/go";
-const Header = () => {
+const Header = ({ setData }) => {
   const [sidebar, setSidebar] = useState(false);
   if (sidebar === true) {
     document.body.style.overflow = "hidden";
@@ -22,8 +22,19 @@ const Header = () => {
       headers: { search: search.value },
     })
       .then((res) => res.json())
-      .then((data) => alert(data.msg));
+      .then((data) => setData(data));
+    search.value = "";
   };
+
+  const [elon, setElon] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:5000/elon/list", {
+      method: "GET",
+    })
+      .then((res) => res.json())
+      .then((respons) => setElon(respons));
+  }, []);
 
   return (
     <div>
@@ -54,7 +65,16 @@ const Header = () => {
                       id="search"
                       placeholder="Izlash"
                       required
+                      list="ismsharif"
                     />
+
+                    <datalist id="ismsharif">
+                      {elon.map((e, idx) =>
+                        e.tasdiqlangan === "true" ? (
+                          <option key={idx} value={e.ismsharif}></option>
+                        ) : null
+                      )}
+                    </datalist>
                   </div>
                 </form>
                 <Link className="header_about_text" to="/about">

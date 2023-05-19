@@ -1,8 +1,11 @@
 import Routes from "./routes/Routes";
+import { useState } from "react";
 function App() {
+  const [data, setData] = useState([]);
+
   return (
     <>
-      <Routes />
+      <Routes data={data} setData={setData} />
     </>
   );
 }
