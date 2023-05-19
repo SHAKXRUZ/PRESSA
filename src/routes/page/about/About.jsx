@@ -6,7 +6,8 @@ const About = () => {
       <div className="about_container">
         <div className="about_content">
           <p className="about_header">
-            <BiHomeAlt className="about_pages_home_icons"/> <p className="about_pages_header_title">Biz haqimizda</p>
+            <BiHomeAlt className="about_pages_home_icons" />
+            <span className="about_pages_header_title">Biz haqimizda</span>
           </p>
           <h2 className="about_pages_title">Biz haqimizda</h2>
           <p className="about_pages_text1">

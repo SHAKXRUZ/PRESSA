@@ -34,10 +34,6 @@ const Search = ({ setData }) => {
 
   return (
     <div className="search">
-      <p className="box">
-        lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt,
-        quam?
-      </p>
       <div className="search_container">
         <form className="search_form" onSubmit={(e) => searchHero(e)}>
           <div className="search_form_input_div border_class">

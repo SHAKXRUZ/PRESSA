@@ -64,7 +64,7 @@ const ReklamaElon = () => {
           >
             {elon.map((e, idx) =>
               e.tasdiqlangan === "true" ? (
-                <SwiperSlide>
+                <SwiperSlide key={idx}>
                   <div key={idx} className="reklamalar_elon_card">
                     <img
                       className="reklamalar_elon_card_images"
@@ -101,7 +101,7 @@ const ReklamaElon = () => {
                           <div className="reklamalar_elon_card_text_div">
                             <p className="reklamalar_elon_card_text_and_icon">
                               <TbBuildingSkyscraper className="reklamalar_elon_card_footer_icons" />
-                              {e.professiya}
+                              {e.ichki_yunalish}
                             </p>
                             <p className="reklamalar_elon_card_text_and_icon">
                               <AiOutlineClockCircle className="reklamalar_elon_card_footer_icons" />
