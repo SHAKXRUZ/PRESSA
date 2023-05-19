@@ -13,18 +13,20 @@ const Admin = () => {
         <AdminLogin />
       </Route>
       <Route path="/admin/panel">
-        <AdminHeader />
-        <div className="admin_panel">
+        <div className="admin_panel_flex">
           <AdminSidebar />
-          <Route exact path="/admin/panel">
-            <Kutilmoqda />
-          </Route>
-          <Route path="/admin/panel/qabulqilingan">
-            <QabulQilingan />
-          </Route>
-          <Route path="/admin/panel/radetilganlar">
-            <RadEtilganlar />
-          </Route>
+          <div className="admin_panel_header">
+            <AdminHeader />
+            <Route exact path="/admin/panel">
+              <Kutilmoqda />
+            </Route>
+            <Route path="/admin/panel/qabulqilingan">
+              <QabulQilingan />
+            </Route>
+            <Route path="/admin/panel/radetilganlar">
+              <RadEtilganlar />
+            </Route>
+          </div>
         </div>
       </Route>
     </>
