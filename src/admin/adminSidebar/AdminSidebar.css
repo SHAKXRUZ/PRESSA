@@ -1,0 +1,36 @@
+.admin_panel_sidebar {
+    width: 172px;
+    height: 1024px;
+    background-color: #016BFF;
+}
+
+.admin_panel_sidebar_content {
+    margin: 18px 0px 0px 20px;
+}
+
+.admin_panel_logo {
+    width: 88px;
+    margin-bottom: 72px;
+}
+
+.admin_panel_sidebar_pages_div {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.admin_panel_sidebar_pages_link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+}
+
+.admin_panel_sidebar_icons{
+    color: #FFFFFF;
+font-size: 20px;
+}

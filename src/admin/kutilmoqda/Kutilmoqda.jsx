@@ -1,6 +1,10 @@
 import "./Kutilmoqda.css";
 const Kutilmoqda = () => {
-  return <div className="kutilmoqda">Kutilmoqda</div>;
+  if (!localStorage.getItem("token")) {
+    alert("Token mavjud emas?");
+    window.location = "/admin";
+  }
+  return <div className="admin_panel_kutilmoqda">Kutilmoqda</div>;
 };
 
 export default Kutilmoqda;

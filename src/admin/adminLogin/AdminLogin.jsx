@@ -5,6 +5,10 @@ import { BiLockAlt } from "react-icons/bi";
 import LoginLogo from "../../assets/images/login_logo.png";
 
 const AdminLogin = () => {
+  if (window.location.pathname === "/admin") {
+    localStorage.clear();
+  }
+
   const adminLogin = async (e) => {
     e.preventDefault();
     let { adminname, password } = e.target;
@@ -35,22 +39,11 @@ const AdminLogin = () => {
     password.value = "";
   };
 
-  const localStorageClear = () => {
-    if (localStorage.getItem("token")) {
-      localStorage.clear();
-    }
-  };
-
   return (
     <div className="login">
       <div className="login_container">
         <Link to="/">
-          <img
-            onClick={() => localStorageClear()}
-            className="login_logo"
-            src={LoginLogo}
-            alt="login_logo"
-          />
+          <img className="login_logo" src={LoginLogo} alt="login_logo" />
         </Link>
         <div className="login_form_div">
           <form className="login_form" onSubmit={(e) => adminLogin(e)}>
