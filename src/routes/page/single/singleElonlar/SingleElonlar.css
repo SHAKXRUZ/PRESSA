@@ -13,10 +13,6 @@
     src: url('../../../../assets/fonts/font600.ttf');
 }
 
-@font-face {
-    font-family: 'font800';
-    src: url('../../../../assets/fonts/font800.ttf');
-}
 
 .singleElonlar {
     width: 100%;

@@ -8,16 +8,6 @@
     src: url('../../assets/fonts/font500.ttf');
 }
 
-@font-face {
-    font-family: 'font600';
-    src: url('../../assets/fonts/font600.ttf');
-}
-
-@font-face {
-    font-family: 'font800';
-    src: url('../../assets/fonts/font800.ttf');
-}
-
 .login {
     width: 100%;
     height: 100vh;
@@ -56,6 +46,7 @@
     height: 66px;
     border: 1px solid rgba(15, 24, 38, 0.2);
     border-radius: 4px;
+    background-color: transparent;
     margin-bottom: 30px;
     display: flex;
     align-items: center;
@@ -71,8 +62,7 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 21px;
-    color: #000000;
-    opacity: 0.5;
+    color: dodgerblue;
     background-color: transparent;
 }
 
@@ -121,6 +111,7 @@
     color: #006AFF;
     transition: .5s;
 }
+
 
 @media only screen and (max-width:1000px) {
 
