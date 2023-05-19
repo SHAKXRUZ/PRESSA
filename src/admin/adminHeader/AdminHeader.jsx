@@ -1,6 +1,6 @@
 import "./AdminHeader.css";
 const AdminHeader = () => {
-  return <div>AdminHeader</div>;
+  return <div className="admin_panel_header">AdminHeader</div>;
 };
 
 export default AdminHeader;
