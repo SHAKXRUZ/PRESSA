@@ -24,27 +24,32 @@ const AdminSidebar = () => {
         </Link>
 
         <div className="admin_panel_sidebar_pages_div">
-          <Link className="admin_panel_sidebar_pages_link" to="/">
-            <AiOutlineHome className="admin_panel_sidebar_icons"/>
+          <Link
+            onClick={() => localStorageClearSidebar()}
+            className="admin_panel_sidebar_pages_link"
+            to="/"
+          >
+            <AiOutlineHome className="admin_panel_sidebar_icons" />
             Bosh sahifa
           </Link>
-          <Link className="admin_panel_sidebar_pages_link">
-            <IoIosStats className="admin_panel_sidebar_icons"/>
+          <p className="admin_panel_sidebar_pages_link">
+            <IoIosStats className="admin_panel_sidebar_icons" />
             Statistika
-          </Link>
-          <Link className="admin_panel_sidebar_pages_link">
-            <RiDeleteBin6Line className="admin_panel_sidebar_icons"/>
+          </p>
+          <p className="admin_panel_sidebar_pages_link">
+            <RiDeleteBin6Line className="admin_panel_sidebar_icons" />
             O'chirilganlar
-          </Link>
-          <Link className="admin_panel_sidebar_pages_link">
-            <FiSettings className="admin_panel_sidebar_icons"/>
+          </p>
+          <p className="admin_panel_sidebar_pages_link">
+            <FiSettings className="admin_panel_sidebar_icons" />
             Sozlamalar
-          </Link>
-          <Link to='/admin' className="admin_panel_sidebar_pages_link">
-            <IoMdExit className="admin_panel_sidebar_icons"/>
+          </p>
+          <Link to="/admin" className="admin_panel_sidebar_pages_link">
+            <IoMdExit className="admin_panel_sidebar_icons" />
             Chiqish
           </Link>
         </div>
+        <p className="admin_sidebar_footer_text">2023 All Rights</p>
       </div>
     </div>
   );

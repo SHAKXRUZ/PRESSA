@@ -1,5 +1,135 @@
 .admin_panel_header {
     width: 100%;
-    height: 192px;
-    background-color: gray;
+    height: auto;
+    border-bottom: 1px solid #CCD7E0;
+}
+
+.admin_panel_header_top_content {
+    height: 80px;
+    width: 100%;
+    border-bottom: 1px solid #CCD7E0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.admin_panel_header_top_left_div {
+    display: flex;
+    align-items: center;
+    margin-left: 47px;
+}
+
+.admin_panel_search_btn {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid transparent;
+    background-color: transparent;
+    font-size: 20px;
+    color: #0094FF;
+}
+
+.admin_panel_search_input {
+    width: 300px;
+    height: 30px;
+    padding: 0px 10px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: dodgerblue;
+    outline: none;
+    border: 1px solid transparent;
+    background-color: transparent;
+}
+
+.admin_panel_header_top_right_div {
+    display: flex;
+    align-items: center;
+    gap: 38px;
+}
+
+.admin_bell_icons {
+    color: #0094FF;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.admin_panel_admin_name_images {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.admin_panel_admin_images {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.admin_name {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    color: #193951;
+}
+
+.admin_id {
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 16px;
+    color: #193951;
+    opacity: 0.3;
+}
+
+.admin_panel_header_bottom_content {
+    border-bottom: #CCD7E0;
+    height: 112px;
+    display: flex;
+    align-items: center;
+    gap: 206px;
+}
+
+.admin_panel_pages_link_div {
+    display: flex;
+    align-items: center;
+    margin-left: 48px;
+}
+
+.admin_panel_pages_link {
+    padding: 15px 25px;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 20px;
+    color: #193951;
+    text-decoration: none;
+}
+
+.admin_panel_header_sort_input_div {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.admin_panel_sort_input_label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.activ {
+    padding: 15px 25px;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 20px;
+    text-decoration: none;
+    background: #016BFF;
+    border-radius: 50px;
+    color: #FFFFFF;
 }
