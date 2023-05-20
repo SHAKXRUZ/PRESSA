@@ -1,6 +1,6 @@
 .admin_panel_sidebar {
     width: 172px;
-    height: 1024px;
+    height: 700px;
     background-color: #016BFF;
 }
 
@@ -17,6 +17,7 @@
     display: flex;
     flex-direction: column;
     gap: 36px;
+    margin-bottom: 300px;
 }
 
 .admin_panel_sidebar_pages_link {
@@ -28,9 +29,17 @@
     font-size: 14px;
     line-height: 17px;
     color: #FFFFFF;
+    cursor: pointer;
 }
 
-.admin_panel_sidebar_icons{
+.admin_panel_sidebar_icons {
     color: #FFFFFF;
-font-size: 20px;
+    font-size: 20px;
+}
+
+.admin_sidebar_footer_text {
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 13px;
+    color: #FFFFFF;
 }

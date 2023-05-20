@@ -1,5 +1,175 @@
+@font-face {
+    font-family: 'font400';
+    src: url('../../assets/fonts/font400.ttf');
+}
+
+@font-face {
+    font-family: 'font500';
+    src: url('../../assets/fonts/font500.ttf');
+}
+
+@font-face {
+    font-family: 'font600';
+    src: url('../../assets/fonts/font600.ttf');
+}
+
+@font-face {
+    font-family: 'font800';
+    src: url('../../assets/fonts/font800.ttf');
+}
+
 .admin_panel_kutilmoqda {
     width: 100%;
-    height: 831px;
-    background-color: gold;
+    height: 507px;
+    padding: 20px 0px 0px 38px;
+    overflow-y: auto;
 }
+
+.admin_panel_kutilmoqda::-webkit-scrollbar {
+    width: 5px;
+}
+
+.admin_panel_kutilmoqda::-webkit-scrollbar-thumb {
+    background-color: dodgerblue;
+    border-radius: 20px;
+}
+
+.kutilmoqda_card {
+    max-width: 890px;
+    padding: 17px 0px 18px 11px;
+    border-bottom: 1px solid #CCD7DF;
+    background-color: transparent;
+    transition: .5s;
+}
+
+.kutilmoqda_card:hover {
+    background-color: #eff3f6;
+    transition: .5s;
+}
+
+.kutilmoqda_card_top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.kutilmoqda_elon_description {
+    max-width: 412px;
+    font-weight: 800;
+    font-family: 'font800';
+    font-size: 17px;
+    line-height: 27px;
+    color: #193951;
+}
+
+.kutilmoqda_elon_btn_div {
+    display: flex;
+}
+
+.kutilmoqda_elon_bekor_qilish_btn {
+    width: 110px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #D4E0E9;
+    border-radius: 4px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: .5s;
+    border: 1px solid transparent;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 20px;
+    font-family: 'font500';
+    color: #193951;
+    opacity: 0.8;
+}
+
+.kutilmoqda_elon_bekor_qilish_btn:hover {
+    background-color: transparent;
+    border-color: red;
+    color: red;
+    transition: .5s;
+}
+
+.kutilmoqda_elon_tasdiqlash_btn {
+    width: 130px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0094FF;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .5s;
+    border: 1px solid transparent;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 20px;
+    color: #FFFFFF;
+    font-family: 'font500';
+}
+
+.kutilmoqda_elon_tasdiqlash_btn:hover {
+    background-color: transparent;
+    border-color: green;
+    color: green;
+    transition: .5s;
+}
+
+.kutilmoqda_card_bottom {
+    display: flex;
+    align-items: center;
+    /* gap: 45px; */
+}
+
+.kutilmoqda_card_bottom_text_ismsharif {
+    width: 150px;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    font-family: 'font500';
+    color: #193951;
+    opacity: 0.4;
+    text-transform: capitalize;
+}
+
+.kutilmoqda_card_bottom_text_telifon1 {
+    width: 130px;
+    font-family: 'font500';
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #0094FF;
+    text-decoration: none;
+}
+
+.kutilmoqda_card_bottom_text_sana {
+    width: 100px;
+    font-family: 'font500';
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #0094FF;
+}
+
+.kutilmoqda_card_bottom_text_vaqt {
+    width: 80px;
+    font-family: 'font500';
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #0094FF;
+}
+
+.kutilmoqda_card_bottom_text_yunalish {
+    width: 150px;
+    font-family: 'font500';
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #0094FF;
+    text-transform: capitalize;
+}
+

@@ -5,8 +5,11 @@ import Kutilmoqda from "./kutilmoqda/Kutilmoqda";
 import QabulQilingan from "./qabulQilingan/QabulQilingan";
 import AdminLogin from "./adminLogin/AdminLogin";
 import RadEtilganlar from "./radEtilganlar/RadEtilganlar";
+import { useState } from "react";
 import { Route } from "react-router-dom";
 const Admin = () => {
+  const [adminData, setAdminData] = useState([]);
+
   if (
     window.location.pathname === "/admin/panel" &&
     !localStorage.getItem("token")
@@ -29,15 +32,15 @@ const Admin = () => {
             <div className="admin_panel_flex">
               <AdminSidebar />
               <div className="admin_panel_routerlar">
-                <AdminHeader />
+                <AdminHeader setAdminData={setAdminData} />
                 <Route exact path="/admin/panel">
-                  <Kutilmoqda />
+                  <Kutilmoqda adminData={adminData} />
                 </Route>
                 <Route path="/admin/panel/qabulqilingan">
-                  <QabulQilingan />
+                  <QabulQilingan adminData={adminData} />
                 </Route>
                 <Route path="/admin/panel/radetilganlar">
-                  <RadEtilganlar />
+                  <RadEtilganlar adminData={adminData} />
                 </Route>
               </div>
             </div>
