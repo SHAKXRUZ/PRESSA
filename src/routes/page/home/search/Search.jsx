@@ -7,7 +7,7 @@ const Search = ({ setData }) => {
   const [elon, setElon] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/elon/list", {
+    fetch("https://magnificent-turkey.cyclic.app/elon/list", {
       method: "GET",
     })
       .then((res) => res.json())
@@ -18,7 +18,7 @@ const Search = ({ setData }) => {
     e.preventDefault();
     const { date, bulim, radio, ismsharif } = e.target;
 
-    await fetch("http://localhost:5000/elon/header_search", {
+    await fetch("https://magnificent-turkey.cyclic.app/elon/header_search", {
       method: "GET",
       headers: {
         search: date.value || bulim.value || radio.value || ismsharif.value,

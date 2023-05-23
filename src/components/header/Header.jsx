@@ -17,7 +17,7 @@ const Header = ({ setData }) => {
     e.preventDefault();
     let { search } = e.target;
 
-    await fetch("http://localhost:5000/elon/header_search", {
+    await fetch("https://magnificent-turkey.cyclic.app/elon/header_search", {
       method: "GET",
       headers: { search: search.value },
     })
@@ -29,7 +29,7 @@ const Header = ({ setData }) => {
   const [elon, setElon] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/elon/list", {
+    fetch("https://magnificent-turkey.cyclic.app/elon/list", {
       method: "GET",
     })
       .then((res) => res.json())

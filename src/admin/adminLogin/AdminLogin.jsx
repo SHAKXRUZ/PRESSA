@@ -13,7 +13,7 @@ const AdminLogin = () => {
     e.preventDefault();
     let { adminname, password } = e.target;
 
-    await fetch("http://localhost:5000/admin/login", {
+    await fetch("https://magnificent-turkey.cyclic.app/admin/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
