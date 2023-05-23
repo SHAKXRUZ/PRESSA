@@ -11,7 +11,7 @@ const RadEtilganlar = ({ adminData }) => {
     window.location = "/admin";
   }
   useEffect(() => {
-    fetch("http://localhost:5000/elon/list", {
+    fetch("https://magnificent-turkey.cyclic.app/elon/list", {
       method: "GET",
     })
       .then((res) => res.json())

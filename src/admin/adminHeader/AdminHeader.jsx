@@ -29,7 +29,7 @@ const AdminHeader = ({ setAdminData }) => {
     e.preventDefault();
     let { adminSearch } = e.target;
 
-    await fetch("http://localhost:5000/admin/admin_search", {
+    await fetch("https://magnificent-turkey.cyclic.app/admin/admin_search", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

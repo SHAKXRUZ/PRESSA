@@ -8,7 +8,7 @@ const Kutilmoqda = ({ adminData }) => {
   }
 
   useEffect(() => {
-    fetch("http://localhost:5000/elon/list", {
+    fetch("https://magnificent-turkey.cyclic.app/elon/list", {
       method: "GET",
     })
       .then((res) => res.json())
@@ -16,7 +16,7 @@ const Kutilmoqda = ({ adminData }) => {
   }, []);
 
   const elonQabulQilinganlar = async (e) => {
-    fetch(`http://localhost:5000/admin/elon_kutilmoqda/${e.id}`, {
+    fetch(`https://magnificent-turkey.cyclic.app/admin/elon_kutilmoqda/${e.id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -33,7 +33,7 @@ const Kutilmoqda = ({ adminData }) => {
   };
 
   const elonRadEtilganElonlar = async (e) => {
-    fetch(`http://localhost:5000/admin/elon_bekor/${e.id}`, {
+    fetch(`https://magnificent-turkey.cyclic.app/admin/elon_bekor/${e.id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

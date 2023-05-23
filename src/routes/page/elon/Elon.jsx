@@ -80,7 +80,7 @@ const Elon = () => {
       file,
     } = e.target;
 
-    await fetch("http://localhost:5000/elon/elon_create", {
+    await fetch("https://magnificent-turkey.cyclic.app/elon/elon_create", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
