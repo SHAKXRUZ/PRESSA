@@ -22,17 +22,17 @@ const Elon = () => {
     (date.getMonth() + 1) +
     "-" +
     date.getDate();
-  const vaqt =
+  const vaqtlar =
     (date.getHours() < 10 ? "0" + date.getHours() : date.getHours()) +
     ":" +
     (date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes());
 
-  const [sanaValue, setSanaValue] = useState(bugun);
-  const [vaqtValue, setVaqtValue] = useState(vaqt);
-  const [bulimValue, setBulimValue] = useState("Web dasturlash");
-  const [ichkiBulimValue, setIchkiBulimValue] = useState("Java developer");
-  const [radioValue, setRadioValue] = useState("online");
-  const [elon_img_url, setElon_img_url] = useState("");
+  const [sana, setSanaValue] = useState(bugun);
+  const [vaqt, setVaqtValue] = useState(vaqtlar);
+  const [yunalishValue, setBulimValue] = useState("Web dasturlash");
+  const [ichki_yunalishValue, setIchkiBulimValue] = useState("Java developer");
+  const [tadbir_turiValue, setRadioValue] = useState("online");
+  const [img_url, setElon_img_url] = useState("");
 
   function sanaFunction(e) {
     setSanaValue(e.target.value);
@@ -75,28 +75,28 @@ const Elon = () => {
       professiya,
       telifon1,
       telifon2,
-      description,
+      elon_description,
       mavzumatni,
       file,
     } = e.target;
 
-    await fetch("http://localhost:5000/elon/create", {
+    await fetch("http://localhost:5000/elon/elon_create", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        sanaValue,
-        vaqtValue,
-        bulimValue,
-        ichkiBulimValue,
-        radioValue,
+        sana,
+        vaqt,
+        yunalishValue,
+        ichki_yunalishValue,
+        tadbir_turiValue,
         link: url.value,
-        ismsharif: ismsharif.value,
-        professiya: professiya.value,
+        ismsharifValue: ismsharif.value,
+        professiyasi: professiya.value,
         telifon1: telifon1.value,
         telifon2: telifon2.value,
-        description: description.value,
+        elon_description: elon_description.value,
         mavzumatni: mavzumatni.value,
-        elon_img_url,
+        img_url,
       }),
     })
       .then((res) => res.json())
@@ -112,7 +112,7 @@ const Elon = () => {
           professiya.value = "";
           telifon1.value = "";
           telifon2.value = "";
-          description.value = "";
+          elon_description.value = "";
           mavzumatni.value = "";
           file.value = "";
         }
@@ -137,7 +137,7 @@ const Elon = () => {
               </p>
               <div className="elon_sana_input_group">
                 <input
-                  defaultValue={sanaValue}
+                  defaultValue={sana}
                   className="elon_sana_input"
                   type="date"
                   name="date"
@@ -145,7 +145,7 @@ const Elon = () => {
                   required
                 />
                 <input
-                  defaultValue={vaqtValue}
+                  defaultValue={vaqt}
                   className="elon_sana_input"
                   type="time"
                   name="time"
@@ -338,7 +338,7 @@ const Elon = () => {
             <input
               className="post_description_input"
               type="text"
-              name="description"
+              name="elon_description"
               id="description"
               placeholder="Description..."
               required
