@@ -25,7 +25,9 @@ const Search = ({ setData }) => {
       },
     })
       .then((res) => res.json())
-      .then((data) => setData(data));
+      .then((data) => {
+        setData(data);
+      });
     date.value = "";
     bulim.value = "";
     radio.value = "";

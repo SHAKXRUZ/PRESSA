@@ -17,7 +17,7 @@ const HomeElonlar = ({ data }) => {
       .then((res) => res.json())
       .then((respons) => setElon(respons));
   }, []);
-
+  console.log(elon);
   return (
     <div className="home_elonlar">
       <div className="home_elonlar_container">

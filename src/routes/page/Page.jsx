@@ -10,7 +10,7 @@ const Page = ({ data, setData }) => {
     <>
       <Route exact path="/">
         <Header setData={setData} />
-        <Home data={data} setData={setData}/>
+        <Home data={data} setData={setData} />
         <Footer />
       </Route>
       <Route path="/single">
