@@ -11,7 +11,7 @@ const QabulQilingan = ({ adminData }) => {
     window.location = "/admin";
   }
   useEffect(() => {
-    fetch("https://magnificent-turkey.cyclic.app/elon/list", {
+    fetch("https://calm-ruby-perch-ring.cyclic.app/elon/list", {
       method: "GET",
     })
       .then((res) => res.json())
@@ -19,7 +19,7 @@ const QabulQilingan = ({ adminData }) => {
   }, []);
 
   const elonQabulQilingan = async (e) => {
-    fetch(`https://magnificent-turkey.cyclic.app/admin/elon_bekor/${e.id}`, {
+    fetch(`https://calm-ruby-perch-ring.cyclic.app/admin/elon_bekor/${e.id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

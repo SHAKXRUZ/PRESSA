@@ -8,7 +8,7 @@ const Kutilmoqda = ({ adminData }) => {
   }
 
   useEffect(() => {
-    fetch("https://magnificent-turkey.cyclic.app/elon/list", {
+    fetch("https://calm-ruby-perch-ring.cyclic.app/elon/list", {
       method: "GET",
     })
       .then((res) => res.json())
@@ -16,7 +16,7 @@ const Kutilmoqda = ({ adminData }) => {
   }, []);
 
   const elonQabulQilinganlar = async (e) => {
-    fetch(`https://magnificent-turkey.cyclic.app/admin/elon_kutilmoqda/${e.id}`, {
+    fetch(`https://calm-ruby-perch-ring.cyclic.app/admin/elon_kutilmoqda/${e.id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

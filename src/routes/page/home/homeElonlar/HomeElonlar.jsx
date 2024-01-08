@@ -11,7 +11,7 @@ const HomeElonlar = ({ data }) => {
   const [elon, setElon] = useState([]);
 
   useEffect(() => {
-    fetch("https://magnificent-turkey.cyclic.app/elon/list", {
+    fetch("https://calm-ruby-perch-ring.cyclic.app/elon/list", {
       method: "GET",
     })
       .then((res) => res.json())
