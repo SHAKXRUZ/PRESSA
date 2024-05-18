@@ -13,7 +13,7 @@ const AdminLogin = () => {
     e.preventDefault();
     let { adminname, password } = e.target;
 
-    await fetch("https://calm-ruby-perch-ring.cyclic.app/admin/login", {
+    await fetch("https://sore-plum-goldfish-toga.cyclic.app/admin/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
